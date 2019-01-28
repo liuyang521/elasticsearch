@@ -5,7 +5,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import java.io.Serializable;
 
 
-@Document(indexName = "testgoods",type = "goods")
+@Document(indexName = "testgoods",type = "goods")//文档存放索引位置
 public class GoodsInfo implements Serializable {
     private Long id;
     private String name;

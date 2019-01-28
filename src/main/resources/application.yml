@@ -1,4 +1,25 @@
+# 文件中以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的
+# 严格根据空格来标识关系
 spring:
      data:
        elasticsearch:
-         cluster-nodes: 192.168.20.121:9300
+         cluster-nodes: 192.168.20.121:9301
+
+
+person:
+     name: zhangsan
+     age: 20
+     boss: false
+     #日期格式2000/11/11
+     birth: 2000/11/11
+
+     maps: {one: java,two: c++}
+     #lists: [cat, dog, pig]
+     lists:
+       - cat
+       - dog
+       - pig
+
+     dogs:
+      name: bobo
+      age: 2
