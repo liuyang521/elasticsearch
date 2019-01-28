@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -25,10 +26,20 @@ public class ElasticsearchApplicationTests {
     @Autowired
     Person person;
 
+    @Autowired
+    ApplicationContext ioc;
+
     @Test
     public void contextLoads() {
         System.out.println(person);
 
+    }
+
+    @Test
+    public void testHelloService() {
+        //此处名称要和MyAppConfig中方法名称一致
+        boolean b = ioc.containsBean("helloService");
+        System.out.println(b); // true
     }
 
 }
